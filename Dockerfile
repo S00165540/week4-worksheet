@@ -13,7 +13,7 @@ RUN npm run build
 
 FROM nginx:latest
 
-COPY --from=builder /week4-worksheet/dist/week4-worksheet /usr/share/nginx/html
+COPY --from=builder /week4-worksheet/dist/week4-worksheet /html
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
